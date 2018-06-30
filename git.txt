@@ -3,6 +3,4 @@ git config --global user.email nomedoemail
 git remote add origin https://github.com/kaduBass/520.git
 git add .
 git commit -m "curso python introducao"
-git push origin master
-
-
+git push --force origin master

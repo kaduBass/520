@@ -13,6 +13,8 @@ try:
     with open(name, 'w+') as arquivo:
          for x in conteudo:
               arquivo.write(x)
+              #ou escrever com arquivo.writelines()
+
 
 except FileNotFoundError:
     with open(name, 'a') as arquivo:

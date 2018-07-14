@@ -1,10 +1,20 @@
 #!  /usr/bin/python3
 # introducao pyhton
+import glob #retorna uma lista glob.glob dos arquivos
+try:
+    arquivo=input("informe nome do arquivo")
+    
+    if arquivo=="privado":
+        #nao tem direito a acesso a este arquivo
+        raise FileNotFoundError
+    else:
+        print(len(glob.glob("*.olp",recursive=True)))
+       
+           
 
-lista  = ["primeiro","idade","terra"]
-usario = input("QUAL SEU NOME")
-lista.insert(2,usario)
-print(lista)
+            
+except FileNotFoundError as erro:
+    print("nao econtrado o arquivo")
 
 
 

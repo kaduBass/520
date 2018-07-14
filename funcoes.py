@@ -15,17 +15,21 @@ def escopo():
     x=8
     return x
 
-def manipular_arquivo(nome,modo,conteudo=None):
+def manipular_arquivo(nome,modo,conteudo=None,acesso=True):
     if modo =="r":
         try:
             with open(nome,modo) as arquivo:
                 data=arquivo.readline()
                 return data
         except Exception as erro:
+            with open(nome,"w") as arq:
+                arq.write(acesso)
+                return "log criado no arquivo log.txt"
+
             return erro
 
     else:
-        with open(nome,modo) as arquivo:
+        with open(nome,"w") as arquivo:
             arquivo.write(conteudo)
             return manipular_arquivo(nome,"r")
 
@@ -78,7 +82,7 @@ def tres (retornoFuncao):
         return retornoFuncao()
     return four()
 
-@tres
+#s@tres
 def retornoFuncao():
     return "python"
 
@@ -88,7 +92,7 @@ def externa (idioma):
         print("{} {}".format(dic[idioma],nome))
     return interna
 
-func =externa("pt")#funcao externa
-func("pedro")#esta aqui e funcao interna
-func("carlos")
-func("eduardo")
+#unc =externa("pt")#funcao externa
+#func("pedro")#esta aqui e funcao interna
+#func("carlos")
+#func("eduardo")

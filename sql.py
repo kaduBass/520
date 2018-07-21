@@ -12,7 +12,7 @@ try:
    
    
    #res=cur.fetchone()
-   res=cur.fetchone()
+   res=cur.fetchone()#update nao usa-se esta intrucao
    con.commit()
    cur.close()
    cur.close()

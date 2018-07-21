@@ -1,0 +1,15 @@
+
+show dbs ou show databases # ver bases de dados
+show collections ou show tables # ver collections
+.insert() # inserir documentos
+.remove() # remover documentos
+.update() # atualizar documentos
+.find() # buscar documentos
+.pretty() # saida bonita igual pprint
+
+db.pessoas.insert({"nome":"Daniel Prata", "idade":24})
+db.pessoas.update({"_id":1}, {"$set":{"nome":"daniel"}})
+
+create user admin password '4linux';
+create database projeto owner admin;
+\\q desloga do banco
